@@ -1,0 +1,45 @@
+\documentclass[a4j]{jarticle}
+\date{}
+\usepackage{bm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\algrenewcommand\algorithmicdo{}
+\title{連続最適化基礎論1}
+
+\begin{document}
+\maketitle
+
+\section{導入}
+一般に最適化問題は、
+
+\begin{eqnarray*}
+  \begin{cases}最大化f(\bm{x})\cdots 目的関数\\\bm{x}\in S\cdots 許容集合(許容領域)\end{cases}
+\end{eqnarray*}
+
+の形をしている。\\
+
+最大化問題$\langle$P$\rangle$において$\sup\{ f{\bm{x}:\bm{x}\in S}\}$を$\langle$P$\rangle$の最適値とよぶ。ただし、$\langle$P$\rangle$が最小値問題のときは$\inf\{ f{\bm{x}:\bm{x}\in S}\}$が最適値。\\
+
+$\bm{x}\ast\in S$が「$\forall\bm{x}\in S; f(\bm{x})\le f(\bm{x}\ast)$」を満たすとき、$\bm{x}\ast$を$\langle$P$\rangle$の最適解という。$\bm{x}\in S$のとき、$\bm{x}$を$\langle$P$\rangle$の許容解という。\\
+
+$S=\phi$のとき、$\langle$P$\rangle$は実行不能（非許容）、$S\neq\phi$のとき、$\langle$P$\rangle$は実行可能（許容）という。\\
+
+$S=\phi$のとき、最適値$\sup\{f(\bm{x}):\bm{x}\in\phi\}$。\\
+
+最大化問題のとき、
+
+\begin{eqnarray*}
+  \begin{cases}最適値が\infty\cdots\langle P\rangle は非有界\\最適値が有限の値\cdots 最適化が存在？\\最適値が-\infty\cdots\langle P\rangle は実行不能\end{cases}
+\end{eqnarray*}
+
+最適化問題の分類
+
+\begin{eqnarray*}
+  \begin{cases}実行不能\\実行可能\begin{cases}非有界\\有界\begin{cases}最適解あり\\最適解なし\end{cases}\end{cases}\end{cases}
+\end{eqnarray*}
+
+(1)制約なし最適化（$S=\mathbb{R}^{n}$）、(2)制約つき最適化（、(3)錘線型計画）を扱う。
+
+\end{document}
